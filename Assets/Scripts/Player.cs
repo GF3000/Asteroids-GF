@@ -33,9 +33,7 @@ public class Player : MonoBehaviour
     {
         float thrust = Input.GetAxis("Vertical") * moveSpeed * Time.deltaTime;
 
-        //If the player press WASD or space, primerMovimiento is false
-
-
+        //Tras el primer movimiento aplicamos una velocidad constante para que el jugador no se quede parado
         if (primerMovimiento && (Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.S) || Input.GetKeyDown(KeyCode.D) || Input.GetKeyDown(KeyCode.Space)))
         {
             primerMovimiento = false;
@@ -63,7 +61,7 @@ public class Player : MonoBehaviour
         {
             //Destroy(gameObject);
             cartelGameOver.SetActive(true);
-                botonReinicio.SetActive(true); //activamos el boton de reinicio
+            botonReinicio.SetActive(true); //activamos el boton de reinicio
             MeteoritoSpawnerManager.gameOver = true;
             }
     }

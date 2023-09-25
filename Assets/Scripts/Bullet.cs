@@ -11,9 +11,7 @@ public class Bullet : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        // Destroy the bullet after 5 seconds
         Destroy(gameObject, 5f);
-        //Apply a consntant speed to the bullet
         
     }
 
@@ -23,7 +21,6 @@ public class Bullet : MonoBehaviour
         
     }
 
-    //Called when the bullet collides with another object
     private void OnCollisionEnter2D(Collision2D collision)
     {
         //If the bullet collides with an enemy
